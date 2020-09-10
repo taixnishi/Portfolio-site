@@ -3,6 +3,24 @@
         <div class="mid">
             <h1>Welcome to<br> Nishikawa Portfolio</h1>
         </div>
+    <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="100"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="2"
+        :lineLinked="true"
+        :lineOpacity="0.7"
+        :linesDistance="150"
+        :moveSpeed="4"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+        >
+    </vue-particles>
     </div>
 </template>
 
@@ -34,7 +52,7 @@ export default {
         width: 100%;
         height: 90vh;
         position: relative;
-        background-image: url("../assets/art.jpg");
+        background-image: url("../assets/universe4.jpeg");
         background-size: cover;
     }
     .mid{
@@ -47,8 +65,8 @@ export default {
     h1{
         font-family: 'Alfa Slab One', cursive, 'Noto Serif JP', serif;
         font-size: 3rem;
-        font-weight: bold;
-        color: black;
+        color: white;
+        text-shadow: 10px 10px 1px rgba(0,0,0,0.7)
     }
 
     @media screen and (min-width:600px) {
