@@ -63,15 +63,17 @@ export default {
         width: 100%;
     }
     h1{
-        font-family: 'Alfa Slab One', cursive, 'Noto Serif JP', serif;
+        font-family: 'Lobster', cursive,'Noto Serif JP', serif;
         font-size: 3rem;
         color: white;
         text-shadow: 10px 10px 1px rgba(0,0,0,0.7)
     }
 
+
+
     @media screen and (min-width:600px) {
     h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 </style>

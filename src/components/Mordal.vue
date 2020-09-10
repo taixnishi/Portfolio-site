@@ -35,8 +35,8 @@
 
 #content{
     z-index:2;
-    width:50%;
-    padding-top: 5em;
+    width: 85%;
+    padding: 1.5rem;
     padding-bottom: 5em;
     text-align: center;
     border-radius: 10px;

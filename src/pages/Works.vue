@@ -4,11 +4,14 @@
             <div class="works-header">
                 <h1>Works</h1> 
             </div>
-            <div class="item-list" v-for="(item) of items" :key="item.img_src">
-                <div class="card">
-                    <img @click="openModal(item)" :src="item.img_src" alt="Card image" width="400px">
+            <hr>
+            <div class="flex">
+                <div class="item-list" v-for="(item) of items" :key="item.img_src">
+                    <div class="card">
+                        <img @click="openModal(item)" :src="item.img_src" alt="Card image">
+                    </div>
+                    <modal :val="postItem" v-show="showContent" @close="closeModal" />
                 </div>
-                <modal :val="postItem" v-show="showContent" @close="closeModal" />
             </div>
         </section>
     </div>
@@ -36,8 +39,22 @@ export default {
             desc: "課題で作成したポートフォリオです",
             range: "コーディング",
             lang: "Ruby,Javascript, HTML",
-            img_src: require("../assets/example3.jpg")
-            }
+            img_src: require("../assets/vintage1.jpg")
+            },
+            {
+            id: 3,
+            desc: "課題で作成したポートフォリオです",
+            range: "コーディング",
+            lang: "Ruby,Javascript, HTML",
+            img_src: require("../assets/vintage1.jpg")
+            },
+            {
+            id: 4,
+            desc: "課題で作成したポートフォリオです",
+            range: "コーディング",
+            lang: "Ruby,Javascript, HTML",
+            img_src: require("../assets/vintage1.jpg")
+            },
         ]
         }
     },
@@ -68,13 +85,24 @@ export default {
     }
     h1{
         display: inline-block;
-        font-family: 'Alfa Slab One', cursive, 'Noto Serif JP', serif;
-        font-size: 4rem;
-        color: #00995e;
+        font-family: 'Lobster', cursive,'Noto Serif JP', serif;
+        font-size: 3rem;
+        color: #000;
     }
 
 .card{
-    width: 500px;
+    width: auto;
+    margin: 20px;
+    background-color: #fdfdfd;
+}
+.card > img{
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.7);
+}
+.card > img:hover{
+    transform: translateY(10px);
 }
 
 
@@ -82,13 +110,18 @@ export default {
     .works{
         padding: 30px;
     }       
-    .works-header{
-        display: flex;
-    }
     h1{
-        font-size: 5rem;
+        font-size: 4rem;
         margin-left: 50px;
     }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-list{
+        width: 50%;
+    }
+
 }
 
 

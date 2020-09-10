@@ -8,7 +8,9 @@
     </header>
     <main>
       <div id="app">
-        <router-view></router-view>
+        <vue-page-transition >
+          <router-view></router-view>
+        </vue-page-transition>
       </div>
     </main>
     <Footer></Footer>
@@ -26,6 +28,9 @@ export default {
 </script>
 
 <style>
+hr{
+  margin: 12px 0;
+}
 
   body {
   margin: 0;
