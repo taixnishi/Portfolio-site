@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 hr{
   margin: 12px 0;
 }
@@ -38,8 +38,6 @@ hr{
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
@@ -47,22 +45,22 @@ hr{
 #header {
   width: 100%;
   height: 60px;
-  background: white;
   box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
   display: flex;
 }
 
 #header a {
-  text-decoration: none;
   color: #00331f;
   width: 25%;
-  background: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   line-height: 60px;
 }
 #header a:hover{
   border: solid 0.8px rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  background-color: black;
+  color: white;
 }
 @media screen and (min-width:600px) {
     #header a{

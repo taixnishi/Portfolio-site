@@ -39,21 +39,21 @@ export default {
             desc: "課題で作成したポートフォリオです",
             range: "コーディング",
             lang: "Ruby,Javascript, HTML",
-            img_src: require("../assets/vintage1.jpg")
+            img_src: require("../assets/hurugi1.jpeg")
             },
             {
             id: 3,
             desc: "課題で作成したポートフォリオです",
             range: "コーディング",
             lang: "Ruby,Javascript, HTML",
-            img_src: require("../assets/vintage1.jpg")
+            img_src: require("../assets/hurugi2.jpeg")
             },
             {
             id: 4,
             desc: "課題で作成したポートフォリオです",
             range: "コーディング",
             lang: "Ruby,Javascript, HTML",
-            img_src: require("../assets/vintage1.jpg")
+            img_src: require("../assets/hurugi3.jpeg")
             },
         ]
         }
@@ -94,15 +94,17 @@ export default {
     width: auto;
     margin: 20px;
     background-color: #fdfdfd;
+    transition: transform 0.7s;
 }
 .card > img{
     vertical-align: middle;
     width: auto;
     height: auto;
     box-shadow: 1px 2px 10px rgba(0,0,0,0.7);
+    cursor: pointer;
 }
-.card > img:hover{
-    transform: translateY(10px);
+.card:hover{
+    transform: scale(0.95);
 }
 
 
