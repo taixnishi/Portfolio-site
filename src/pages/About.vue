@@ -2,7 +2,7 @@
     <div>
         <section class="about">
             <div class="about-header">
-                <h1>About</h1>
+                <h1 style="border-bottom: solid 3px black;">About</h1>
             </div>
             <hr>
             <div class="about-main">
@@ -25,29 +25,9 @@
                         <h2>Skills</h2>
                         <p>-スキルについて-</p>
                         <div class="wrap">
-                            <div class="skill">
-                                <img src="../assets/html-5.svg" alt="" width="50px">
-                                <p class="skill-name">HTML5</p>
-                            </div>
-                            <div class="skill">
-                                <img src="../assets/css-3.svg" alt="" width="50px">
-                                <p class="skill-name">CSS3</p>
-                            </div>
-                            <div class="skill">
-                                <img src="../assets/javascript.svg" alt="" width="50px">
-                                <p class="skill-name">javascript</p>
-                            </div>
-                            <div class="skill">
-                                <img src="../assets/vue.svg" alt="" width="50px">
-                                <p class="skill-name">Vue.js</p>
-                            </div>
-                            <div class="skill">
-                                <img src="../assets/ruby.svg" alt="" width="50px">
-                                <p class="skill-name">Ruby</p>
-                            </div>
-                            <div class="skill">
-                                <img src="../assets/rails.svg" alt="" width="100px">
-                                <p class="skill-name">RubyonRails</p>
+                            <div class="skill"   v-for="mySkill in mySkills" :key="mySkill.name">
+                                <img :src='mySkill.img_src' alt="" width="60px">
+                                <p class="skill-name">{{mySkill.name}}</p>
                             </div>
                         </div>
                     </div>
@@ -63,6 +43,23 @@
         </section>
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            mySkills: [
+                {img_src: require("../assets/html-5.svg"), name: "HTML5"},
+                {img_src: require("../assets/css-3.svg"), name: "CSS3"},
+                {img_src: require("../assets/javascript.svg"), name: "Javascript"},
+                {img_src: require("../assets/vue.svg"), name: "Vue.js"},
+                {img_src: require("../assets/ruby.svg"), name: "Ruby"},
+                {img_src: require("../assets/rails.svg"), name: "RubyonRails"},
+            ]
+        }
+    }
+}
+</script>
 
 <style scoped>
     .about{
@@ -84,8 +81,6 @@
         width: auto;
         height: auto;
         background: #fff;
-        border-radius: 10px;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     } 
     .profile-head{
         padding-top: 10px;
@@ -108,8 +103,6 @@
 /* skill */
     .skills{
         margin-top: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
         padding: 10px;
     }
     .wrap{
@@ -127,8 +120,6 @@
  /* career */
     .career{
         margin-top: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
         padding: 10px;
         width: auto;
         height: 700px;

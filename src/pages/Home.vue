@@ -1,53 +1,54 @@
 <template>
     <div class="home">
         <div class="mid">
-            <h1>Welcome to<br> Nishikawa Portfolio</h1>
+            <vue-typer 
+            :text="['Hello\nWorld','Welcome to \nMy Portfolio']" 
+            :repeat='Infinity'
+            :shuffle='false'
+            initial-action='typing'
+            :pre-type-delay='120'
+            :type-delay='120'
+            :pre-erase-delay='2000'
+            :erase-delay='250'
+            erase-style='select-all'
+            :erase-on-complete='false'
+            caret-animation='expand'
+            ></vue-typer>
         </div>
-    <vue-particles
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="100"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="2"
-        :lineLinked="true"
-        :lineOpacity="0.7"
-        :linesDistance="150"
-        :moveSpeed="4"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-        >
-    </vue-particles>
+        <vue-particles
+            color="#dedede"
+            :particleOpacity="0.7"
+            :particlesNumber="100"
+            shapeType="circle"
+            :particleSize="4"
+            linesColor="#dedede"
+            :linesWidth="2"
+            :lineLinked="true"
+            :lineOpacity="0.7"
+            :linesDistance="150"
+            :moveSpeed="4"
+            :hoverEffect="true"
+            hoverMode="grab"
+            :clickEffect="true"
+            clickMode="push"
+            >
+        </vue-particles>
     </div>
 </template>
 
 <script>
+
+
 export default {
     data(){
         return{
             show: true,
         }
-    }
+    },
 }
 </script>
 
 <style scoped>
-    .fade-enter,
-    .fade-leave-to{
-        opacity: 0
-    }
-    .fade-enter-active,
-    .fade-leave-active{
-        transition: opacity 0.5s;
-    }
-    .fade-leave,
-    .fade-enter-to{
-        opacity: 1;
-    }
-    
     .home{
         width: 100%;
         height: 90vh;
@@ -62,18 +63,18 @@ export default {
         transform: translateY(-50%) translateX(-50%);
         width: 100%;
     }
-    h1{
-        font-family: 'Lobster', cursive,'Noto Serif JP', serif;
+    .vue-typer{
         font-size: 3rem;
-        color: white;
-        text-shadow: 10px 10px 1px rgba(0,0,0,0.7)
     }
-
-
-
+    .vue-typer .custom.char .typed {
+        color: white;
+    }
+    .vue-typer .custom.char .selected{
+        color: white;
+    }
     @media screen and (min-width:600px) {
-    h1{
-        font-size: 4rem;
+    .vue-typer{
+        font-size: 5rem;
     }
 }
 </style>

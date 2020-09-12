@@ -14,7 +14,8 @@
     "vue-page-transition": "^0.2.2",
     "vue-particles": "^1.0.9",
     "vue-particles-use": "^1.0.1",
-    "vue-router": "^3.4.3"
+    "vue-router": "^3.4.3",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

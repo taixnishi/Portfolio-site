@@ -33,5 +33,9 @@ export default new Router({
             component: Contact,
             meta: { transition: 'fade-in-right' },
         },
+        {
+            path: "*",
+            redirect: "/"
+        }
     ]
 })

@@ -44,7 +44,7 @@
     background: white;
 }
 #content > img {
-    width: 95%;
+    width: 80%;
 }
 
 </style>
