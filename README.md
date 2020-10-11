@@ -1,4 +1,4 @@
-# janken_game
+#ポートフォィオサイト(制作途中)
 
 ## Project setup
 ```
